@@ -261,6 +261,17 @@
       .footer-inner { grid-template-columns: 1fr 1fr; }
       .footer-brand { grid-column: span 2; }
     }
+    @media (max-width: 768px) {
+      .hero-panels { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, calc(33.33svh - 14px)); height: 100svh; min-height: unset; gap: 10px; padding: 10px; flex-direction: unset; }
+      .panel { flex: none !important; height: unset !important; border-right: none !important; border-bottom: none !important; border-radius: 16px; overflow: hidden; }
+      .panel:last-child { border-bottom: none; }
+      .panel-title { writing-mode: horizontal-tb !important; transform: rotate(0deg) !important; font-size: 1.1rem !important; }
+      .panel-num { opacity: 1 !important; transform: none !important; }
+      .panel-desc { display: none; }
+      .panel-cta { display: none; }
+      .panel-content { padding: 0.8rem 1rem; }
+      .scroll-wrap { display: none; }
+    }
     @media (max-width: 600px) {
       section { padding: 4rem 5%; }
       .proceso-steps { grid-template-columns: 1fr; }
