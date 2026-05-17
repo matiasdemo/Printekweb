@@ -20,7 +20,7 @@
       --card-bg: #222222;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; overflow-x: hidden; }
+    html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--dark2); }
@@ -263,9 +263,11 @@
       .footer-brand { grid-column: span 2; }
     }
     @media (max-width: 768px) {
-      .hero-panels { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, calc(33.33svh - 14px)); height: 100svh; min-height: unset; gap: 10px; padding: 10px; flex-direction: unset; }
+      nav { background: rgba(17,17,17,0.95) !important; backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(123,107,176,.3); }
+      .hero-panels { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, calc(33.33svh - 14px)); height: 100svh; min-height: unset; gap: 10px; padding: 10px; flex-direction: unset; overflow: hidden; }
       .panel { flex: none !important; height: unset !important; border-right: none !important; border-bottom: none !important; border-radius: 16px; overflow: hidden; }
       .panel:last-child { border-bottom: none; }
+      .panel-bg { inset: 0 !important; }
       .panel-title { writing-mode: horizontal-tb !important; transform: rotate(0deg) !important; font-size: 1.1rem !important; }
       .panel-num { opacity: 1 !important; transform: none !important; }
       .panel-desc { display: none; }
